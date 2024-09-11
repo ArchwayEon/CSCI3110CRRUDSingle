@@ -11,6 +11,7 @@ builder.Services.AddDbContext<ApplicationDbContext>(options => {
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+builder.Services.AddScoped<IPersonRepository, DbPersonRepository>();
 
 var app = builder.Build();
 
